@@ -33,4 +33,4 @@ Please adhere to this project's `code of conduct`.
 ## Installation
 
 None needed! Goto 
-https://jjelder.com/webhex/
+https://justchecking.github.io/WebHexReplacer/
