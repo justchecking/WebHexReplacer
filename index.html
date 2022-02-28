@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Binary Image Replacer</title>
+  <link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="FileSaver.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1 style=" text-align: center;" >Simple File Hex/Binary Extractor/Replacer </h1>    <p>
+Upload file, Choose Format, And download!  <br>
+For Insert, use same format and number, ex (203.png) in a zip.
+<br> You can have multiple images zipped matched to the original file.
+<br> Download all takes time!
+</p>
+
+<audio controls  id="Sourceaudio"  style="margin-right: 140px;width: 20%;float: right;">
+	<source id="audio" src="" type="audio/ogg"  >
+	Your browser does not support the audio element.
+</audio>
+
+
+<p style="float: right;">Selected Ogg:</p>
+<br/><br/><br/>
+<input type="file" id="files" hidden/>
+<label class="Ilabel"  for="files">Choose file</label>
+<span id="file-chosen">No file</span>
+<span class=nobr  style=" margin-left: 140px;" id="index">Not Parsed</span>
+
+<img id="image" src="cow.jpg" style="margin-right: 140px;width: 50%;float: right;"/>
+
+
+
+<br><br/>
+<div class="list" >
+	<ul>
+		<li onclick="readBlob('89504e470d0a1a0a','49454e44ae426082','.png')">Png</li>
+		<li  onclick="readBlob('ffd8ffe000104a464946','ffd9','.jpg')" >Jpeg</li>
+		<li onclick="readBlob('4f6767530002','','.ogg')">Ogg</li>
+		<li onclick="customBlob()">Custom</li>
+	</ul>
+</div>
+
+
+<div class="list" style="width: 400px;">
+	<ul id="Filelist">
+	</ul>
+</div>
+<div id="content"></div>
+
+<div class="Buttons">
+<br> 
+ <button style="margin-top: 10px; margin-left: 20px;padding: 20px;" onclick="downloadAll()">Download All</button>
+  <input  onChange='uploadAll()' type="file" id="upload" hidden/>
+		<label class="Ilabel" style="margin-top: 10px; margin-left: 20px;padding: 20px;" for="upload">Reinsert</label>
+		  <button style=" margin-top: 10px; margin-left: 20px;padding: 20px;" onclick="download()">Modified</button>
+</br>
+	</div >
+
+<div class="inputList">
+	<p style="text-align: center;">For Custom Hex</p>
+<label for="Shex">Starting Hex:</label>
+<input type="text" id="Shex" name="Shex"><br><br>
+<label for="Ehex">Ending Hex:</label>
+<input type="text" id="Ehex" name="Ehex"><br><br>
+
+<label for="Ext">Extension</label>
+<input type="text" id="Ext" name="Ext"><br><br>
+</div>
+
+
+
+<!-- partial -->
+<script type="text/javascript" src="jszip.min.js"></script>
+<script type="text/javascript" src="jszip-utils.js"></script>
+<script type="text/javascript" src="FileSaver.js"></script>
+
+<script type="text/javascript" src="script.js"></script>
+
+
+
+</body>
+</html>
