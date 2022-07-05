@@ -33,4 +33,4 @@ Please adhere to this project's `code of conduct`.
 ## Installation
 
 None needed! Goto 
-https://justchecking.github.io/WebHexReplacer/
+https://ormaq.github.io/WebHexReplacer/
